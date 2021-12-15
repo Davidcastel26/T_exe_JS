@@ -1,16 +1,13 @@
 
-const subsetSum = (nums, n) =>{
+const subsetSum = (nums, n, i=0) =>{
 
- const suma = new Set([0])
+    
+if(target === 0 ) return ture
+if(target < 0) return false
+if(i > nums.length) return false
 
- return nums.some((num) => {
-     const copiaSuma = [...suma]
-     for (let sum of copiaSuma){
-         let nueva = num + sum
-         if(n === nueva) return true
-         if(nueva < n) suma.add(nueva)
-     }
- })
+const excluido = subsetSum(nums, n, i+1)
+const incluir = subsetSum(nums,n-nums[i], i+1)
 
 
 
@@ -33,6 +30,7 @@ const func = (e) => e % 2 === 0
 
 arr.some((e)=> e % 2 === 0)      -> true
 
+-------------------------------------------
 i=0
 
 if(target === 0 ) return ture
@@ -41,6 +39,25 @@ if(i > nums.length) return false
 
 const excluido = subsetSum(nums, n, i+1)
 const incluir = subsetSum(nums,n-nums[i], i+1)
+
+
+
+---------------------------------------
+ const suma = new Set([0])
+
+ return nums.some((num) => {
+     const copiaSuma = [...suma]
+     for (let sum of copiaSuma){
+         let nueva = num + sum
+         if(n === nueva) return true
+         if(nueva < n) suma.add(nueva)
+     }
+ })
+
+
+-----------------------------------------
+
+
 
 
 
