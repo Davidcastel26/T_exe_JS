@@ -14,15 +14,13 @@ def linear_search(list, target):
   for i in range(0, len(list)):
     if list[i] == target: 
       return i
-  return None
-  
+  return None 
 
 def verify(index):
   if index is not None:
     print("target found at index: ", index)
   else:
-    print("Target not found in list")
-    
+    print("Target not found in list")    
 
 numbers = list(range(0,10))
 # print(numbers)
@@ -31,5 +29,3 @@ result = linear_search(numbers, 12)
 verify(result)
 result2 = linear_search(numbers, 9)
 verify(result2)
-
-  

@@ -5,8 +5,8 @@ function linear_search(arrai, target){
         if(arrai[i] == target ){
             return i
         }
-        return null
     }
+    return null
 }
 
 function verify(index){
