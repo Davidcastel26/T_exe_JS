@@ -1,16 +1,15 @@
 
 function linear_search(arrai, target){
     // Return the index position of the target if found, else returns None
-
-    let result = 0; 
-    
-    for( let i = 0; arrai.length > i; i++){
+    let result = 0
+    for( let i = 0; i < arrai.length; i++){
         if(arrai[i] == target ){
-            return i
+            result = i
         }else{
-            return null
+          reesult = null
         }
     }
+  return result
 }
 
 function verify(index){
