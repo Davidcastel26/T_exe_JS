@@ -1,6 +1,9 @@
 
 function linear_search(arrai, target){
     // Return the index position of the target if found, else returns None
+
+    let result = 0; 
+    
     for( let i = 0; arrai.length > i; i++){
         if(arrai[i] == target ){
             return i
