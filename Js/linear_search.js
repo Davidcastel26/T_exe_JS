@@ -27,3 +27,5 @@ verify(result)
 
 let result2 = linear_search(numbers, 8);
 verify(result2)
+
+// this program return index 0 when index does not exist
