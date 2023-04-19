@@ -13,6 +13,11 @@ class Node:
         return "<Node data: %s>" % self.data
 
 class LinkedList:
-
+    """
+    Singly linked list
+    """
     def __init__(self):
         self.head = None
+
+    def is_empty(self):
+        return self.head ==None
