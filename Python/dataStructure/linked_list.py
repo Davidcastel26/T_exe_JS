@@ -45,7 +45,7 @@ class LinkedList:
         new_node.next_node = self.head
         self.head = new_node
 
-    def __repr__ (self):
+    def __repr__(self):
         """
         Return a string representation of the list
         Takes 0(n) time
@@ -62,3 +62,4 @@ class LinkedList:
                 nodes.append("[%s]" % current.data )
             
             current = current.next_node
+        return '->'.join(nodes)
