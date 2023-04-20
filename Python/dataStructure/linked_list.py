@@ -38,4 +38,5 @@ class LinkedList:
 
     def add(self, data):
         new_node = Node(data)
-        
+        new_node.next_node = self.head
+        self.head = new_node
