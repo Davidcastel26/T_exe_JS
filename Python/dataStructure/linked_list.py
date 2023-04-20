@@ -20,7 +20,7 @@ class LinkedList:
         self.head = None
 
     def is_empty(self):
-        return self.head ==None
+        return self.head == None
     
     def size(self):
         """
