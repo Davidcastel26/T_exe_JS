@@ -45,6 +45,9 @@ class LinkedList:
         new_node.next_node = self.head
         self.head = new_node
 
+    def search(self, key):
+        
+
     def __repr__(self):
         """
         Return a string representation of the list
