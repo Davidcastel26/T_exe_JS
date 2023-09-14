@@ -2,8 +2,8 @@
 const subsetSum = (nums, n, i=0) =>{
 
     
-if(target === 0 ) return ture
-if(target < 0) return false
+if(n === 0 ) return true
+if(n < 0) return false
 if(i > nums.length) return false
 
 const excluido = subsetSum(nums, n, i+1)
