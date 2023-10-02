@@ -32,7 +32,28 @@ function LinkedList() {
     else this.tail = null;
     return val
   }
+
+  LinkedList.prototype.__removeTail__ = function(){
+    if( !this.tail ) return null;
+    var val = this.tail.value;
+    this.tail = this.tail.prev;
+    if( this.tail ) this.tail.next = null;
+    else this.head = null;
+    
+    return val;
+  }
   
+  LinkedList.prototype.__search__ = function(searchValue) {
+    var currentNode  = this.head;
+    
+    while( currentNode ){
+      if( currentNode.value === searchValue ) return currentNode.value;
+      currentNode = currentNode.next;
+      
+    }
+    return null;
+  }
+
   var myLL = new LinkedList();
   myLL.__addToHead__(1000);
   myLL.__addToHead__(2000);
