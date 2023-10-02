@@ -1,5 +1,5 @@
 
-function recursive_binary_search(list: array[], target){
+function recursive_binary_search(list, target){
 
   if( list.length == 0 ) return false;
   else{
