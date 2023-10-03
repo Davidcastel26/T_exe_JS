@@ -1,26 +1,18 @@
-let infoGiven = [43,55,76,72,98,54,]
-let num = []
+// order an array of numbers and retrived the las two from it 
+const numbers = [14,56,25,78,42];
 
-function orderList ( numbers ) {
-  
-  if( !numbers.length ) return null;
-  // aqui tendremos que meter los numeros ordenados 
-  const ordered = [];
-  
-  for(let i=0; i < numbers.length; i++){
-    const head = numbers[0];
-    console.log(head)
-    if( head < numbers[i]){
-      console.log(numbers[i])
-      ordered.push(head)
-    }else{
-      // numbers[head] = numbers[i];
-      // console.log(numbers[head])
-    }
+for ( let i = 0; i < numbers.length; i++){
+
+  if( numbers[i] > numbers[i + 1]){
+    let temp = numbers[i];
+    numbers[i] = numbers[i + 1];
+    numbers[i + 1] = temp;
+    i = -1;
   }
-
-  return ordered;
+  
 }
 
-orderList(infoGiven)
-// orderList(num)
+const [,,, ...ultimos] = numbers
+
+console.log(numbers)
+console.log(ultimos)
