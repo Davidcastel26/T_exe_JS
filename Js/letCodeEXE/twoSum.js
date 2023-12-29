@@ -1,4 +1,4 @@
-var twoSum = function(target, nums) {
+var twoSum1 = function(target, nums) {
     
     // let table = Array(target)
     var table = {};
@@ -15,6 +15,29 @@ var twoSum = function(target, nums) {
     
     return false
   };
+
+  var twoSum2 = function(nums, target) {
+    const hashmap={};
+    for(let i=0;i<nums.length;i++){
+        const num=nums[i];
+        if(hashmap[target-num] !== undefined){
+            return [hashmap[target-num],i];
+        }
+        hashmap[num]=i;
+    }
+};
+
+var twoSum3 = function(nums, target) {
+  let map = new Map()
+  for(let i=0;i<nums.length;i++){
+      let complement = target - nums[i];
+      if(map.has(complement))
+        return [map.get(complement),i]
+    map.set(nums[i],i)
+  } 
+  
+};
+
   
   twoSum(9,[2,7,11,15])
 
